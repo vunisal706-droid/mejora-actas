@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prueba de Avisos - CEIP Capitulaciones</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .test-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    .test-section {
+      background: #f8f9fa;
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2rem 0;
+      border-left: 4px solid #004aad;
+    }
+    .test-success {
+      background: #d4edda;
+      border-color: #28a745;
+      color: #155724;
+    }
+    .test-warning {
+      background: #fff3cd;
+      border-color: #ffc107;
+      color: #856404;
+    }
+    code {
+      background: #e9ecef;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="LOGO.jpg" alt="Logo CEIP Capitulaciones" class="logo">
+    <h1>Prueba - Sistema de Avisos</h1>
+  </header>
+
+  <div class="test-container">
+    <div class="test-section">
+      <h2>🔍 ¿Qué problema había?</h2>
+      <p>El script JavaScript que carga los avisos desde <code>avisos.txt</code> estaba <strong>truncado/incompleto</strong>.</p>
+      <p>La línea terminaba en <code>.map(lin</code> sin completar la función.</p>
+    </div>
+
+    <div class="test-section test-success">
+      <h2>✅ Solución Aplicada</h2>
+      <p>Se ha completado el script JavaScript con:</p>
+      <ul>
+        <li>Función <code>.map()</code> completa que crea spans</li>
+        <li>Unión de avisos con separador " • "</li>
+        <li>Manejo de errores con <code>.catch()</code></li>
+      </ul>
+    </div>
+
+    <div class="test-section test-warning">
+      <h2>⚡ Importante - Servidor Web</h2>
+      <p><strong>Los avisos solo funcionan en un servidor web</strong>, no al abrir el archivo HTML directamente desde el explorador de archivos.</p>
+      <p><strong>¿Por qué?</strong> Los navegadores bloquean peticiones <code>fetch()</code> a archivos locales por seguridad (política CORS).</p>
+      <p><strong>Soluciones:</strong></p>
+      <ul>
+        <li>✅ Subir archivos a tu servidor web (hosting)</li>
+        <li>✅ Usar GitHub Pages</li>
+        <li>✅ Usar un servidor local (XAMPP, WAMP, Live Server de VS Code)</li>
+      </ul>
+    </div>
+
+    <!-- Avisos importantes - DEMO -->
+    <section class="contenido" id="avisos">
+      <h2>⚠️ Avisos importantes</h2>
+      <div class="avisos-marquesina" id="avisos-container">
+        Cargando avisos...
+      </div>
+    </section>
+
+    <div class="test-section">
+      <h3>📝 Contenido de avisos.txt:</h3>
+      <pre style="background: #282c34; color: #abb2bf; padding: 1rem; border-radius: 8px; overflow-x: auto;">📅 Vacunas de primero y sexto el 4 noviembre.
+🎒 Comienzo del PROA lunes 20 de octubre
+📢 Están al salir las bonificaciones definitivas</pre>
+    </div>
+
+    <div class="test-section">
+      <h3>💻 Código JavaScript Corregido:</h3>
+      <pre style="background: #282c34; color: #abb2bf; padding: 1rem; border-radius: 8px; overflow-x: auto; font-size: 0.9rem;">fetch('avisos.txt')
+  .then(response => response.text())
+  .then(text => {
+    const avisosContainer = document.getElementById('avisos-container');
+    avisosContainer.innerHTML = text
+      .split('\n')
+      .filter(line => line.trim() !== '')
+      .map(line => `&lt;span&gt;${line}&lt;/span&gt;`)
+      .join(' • ');
+  })
+  .catch(error => {
+    document.getElementById('avisos-container').innerHTML = 
+      '&lt;p&gt;No se pudieron cargar los avisos.&lt;/p&gt;';
+  });</pre>
+    </div>
+
+    <div class="test-section test-success">
+      <h3>✨ Estado Actual</h3>
+      <p id="status-check">Verificando...</p>
+    </div>
+
+    <div style="text-align: center; margin: 3rem 0;">
+      <a href="index.html" class="boton-volver">🏠 Volver a la Página Principal</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 CEIP Capitulaciones de Santa Fe | Archivo de Prueba</p>
+  </footer>
+
+  <!-- Script para cargar avisos desde avisos.txt -->
+  <script>
+    fetch('avisos.txt')
+      .then(response => response.text())
+      .then(text => {
+        const avisosContainer = document.getElementById('avisos-container');
+        avisosContainer.innerHTML = text
+          .split('\n')
+          .filter(line => line.trim() !== '')
+          .map(line => `<span>${line}</span>`)
+          .join(' • ');
+        
+        // Actualizar estado
+        document.getElementById('status-check').innerHTML = 
+          '<strong style="color: #28a745;">✅ LOS AVISOS SE CARGARON CORRECTAMENTE</strong><br>' +
+          '<small>El script JavaScript funciona perfectamente en este servidor.</small>';
+      })
+      .catch(error => {
+        document.getElementById('avisos-container').innerHTML = 
+          '<p>⚠️ No se pudieron cargar los avisos.</p>';
+        
+        // Actualizar estado
+        document.getElementById('status-check').innerHTML = 
+          '<strong style="color: #dc3545;">❌ ERROR AL CARGAR AVISOS</strong><br>' +
+          '<small>Esto es normal si abres el archivo HTML directamente desde tu ordenador. ' +
+          'Sube los archivos a un servidor web para que funcione.</small><br><br>' +
+          '<strong>Error:</strong> ' + error.message;
+      });
+  </script>
+</body>
+</html>

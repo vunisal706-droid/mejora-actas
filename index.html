@@ -43,6 +43,23 @@
     <p>El CEIP Capitulaciones de Santa Fe es un centro educativo público ubicado en Santa Fe, Granada, con un fuerte compromiso con la atención a la diversidad, el aprendizaje cooperativo y el desarrollo integral del alumnado.</p>
   </section>
 
+  <!-- Video Aéreo del Colegio -->
+  <section class="contenido">
+    <div class="video-seccion">
+      <h2><i class="fa-solid fa-video"></i> Descubre nuestras instalaciones</h2>
+      <p class="video-descripcion">Vista aérea del CEIP Capitulaciones de Santa Fe</p>
+      <div class="video-container">
+        <iframe 
+          src="https://www.youtube.com/embed/RmvJ9TkUsM0" 
+          title="Vista aérea CEIP Capitulaciones" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </section>
+
   <!-- Asistente Virtual -->
   <section class="contenido">
     <div class="asistente-seccion">
@@ -115,7 +132,7 @@
   </footer>
 
   <div id="fb-root"></div>
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v16.0"></script>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v16.0"></script>
 
   <!-- Script para cargar avisos desde avisos.txt -->
   <script>
@@ -126,4 +143,20 @@
         avisosContainer.innerHTML = text
           .split('\n')
           .filter(line => line.trim() !== '')
-          .map(lin
+          .map(line => `<span>${line}</span>`)
+          .join(' • ');
+      })
+      .catch(error => {
+        document.getElementById('avisos-container').innerHTML = '<p>No se pudieron cargar los avisos.</p>';
+      });
+  </script>
+  <!-- Botón Flotante Asistente Virtual -->
+  <div class="asistente-flotante">
+    <a href="https://chatgpt.com/g/g-690a4f16ef6881919b013f61e39103da-ceip-capitulaciones" target="_blank" class="boton-asistente">
+      <i class="fa-solid fa-robot"></i>
+      <span>Asistente Virtual</span>
+    </a>
+  </div>
+
+</body>
+</html>

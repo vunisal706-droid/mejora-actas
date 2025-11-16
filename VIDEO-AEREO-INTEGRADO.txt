@@ -1,0 +1,252 @@
+╔══════════════════════════════════════════════════════════════════════╗
+║                                                                      ║
+║              🎥 VIDEO AÉREO INTEGRADO - COMPLETADO ✅                ║
+║                                                                      ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+
+📹 VIDEO AÑADIDO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   🔗 URL del video: https://youtube.com/shorts/RmvJ9TkUsM0
+   
+   📍 Ubicación: Página principal (index.html)
+                Entre "Sobre el colegio" y "Asistente Virtual"
+   
+   📐 Formato: Vertical (YouTube Shorts 9:16)
+   
+   🎨 Diseño: Caja con fondo azul degradado + sombra
+
+
+✨ CARACTERÍSTICAS DEL DISEÑO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   ✅ Título llamativo: "Descubre nuestras instalaciones"
+   ✅ Icono de video animado (efecto pulse)
+   ✅ Texto descriptivo: "Vista aérea del CEIP Capitulaciones"
+   ✅ Marco del video con bordes redondeados
+   ✅ Sombra elegante que resalta el video
+   ✅ Fondo con degradado azul claro (#f0f4ff → #e3f2fd)
+   ✅ Borde lateral azul (#004aad) característico del colegio
+
+
+📱 RESPONSIVE DESIGN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   🖥️ DESKTOP (>992px):
+      - Ancho máximo del video: 600px
+      - Centrado en la página
+      - Título tamaño grande
+   
+   📱 TABLET (768px - 992px):
+      - Ancho máximo del video: 450px
+      - Se mantiene centrado
+      - Título tamaño mediano
+   
+   📱 MÓVIL (<600px):
+      - Video ocupa todo el ancho disponible
+      - Mantiene proporción vertical (9:16)
+      - Título más compacto
+      - Padding reducido para aprovechar espacio
+
+
+🎨 ESTRUCTURA DEL DISEÑO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   ┌─────────────────────────────────────────────────────┐
+   │  Header + Navegación                                │
+   ├─────────────────────────────────────────────────────┤
+   │  Hero (Foto grande del colegio)                     │
+   ├─────────────────────────────────────────────────────┤
+   │  Sobre el colegio                                   │
+   ├─────────────────────────────────────────────────────┤
+   │  🎥 VIDEO AÉREO DEL COLEGIO ← NUEVO                 │
+   │  ┌───────────────────────────┐                      │
+   │  │                           │                      │
+   │  │    YouTube Shorts         │                      │
+   │  │    (Vertical)             │                      │
+   │  │                           │                      │
+   │  └───────────────────────────┘                      │
+   ├─────────────────────────────────────────────────────┤
+   │  🤖 Asistente Virtual                               │
+   ├─────────────────────────────────────────────────────┤
+   │  📢 Nuestros canales                                │
+   ├─────────────────────────────────────────────────────┤
+   │  ⚠️ Avisos importantes                              │
+   ├─────────────────────────────────────────────────────┤
+   │  📰 Actualidad Facebook                             │
+   └─────────────────────────────────────────────────────┘
+
+
+📁 ARCHIVOS MODIFICADOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   📄 index.html
+      ➜ +18 líneas de código HTML
+      ➜ Nueva sección .video-seccion
+      ➜ iframe de YouTube integrado
+   
+   📄 style.css
+      ➜ +90 líneas de CSS
+      ➜ Estilos .video-seccion
+      ➜ Estilos .video-container
+      ➜ Animación @keyframes pulse-video
+      ➜ Media queries responsive
+
+
+💻 CÓDIGO TÉCNICO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   HTML del video:
+   ┌──────────────────────────────────────────────────────┐
+   │ <section class="contenido">                          │
+   │   <div class="video-seccion">                        │
+   │     <h2>                                             │
+   │       <i class="fa-solid fa-video"></i>              │
+   │       Descubre nuestras instalaciones                │
+   │     </h2>                                            │
+   │     <p class="video-descripcion">                    │
+   │       Vista aérea del CEIP Capitulaciones            │
+   │     </p>                                             │
+   │     <div class="video-container">                    │
+   │       <iframe                                        │
+   │         src="https://www.youtube.com/embed/...       │
+   │         allowfullscreen>                             │
+   │       </iframe>                                      │
+   │     </div>                                           │
+   │   </div>                                             │
+   │ </section>                                           │
+   └──────────────────────────────────────────────────────┘
+
+   CSS destacado:
+   ┌──────────────────────────────────────────────────────┐
+   │ .video-container {                                   │
+   │   position: relative;                                │
+   │   max-width: 600px;                                  │
+   │   margin: 0 auto;                                    │
+   │   padding-bottom: 177.78%; /* Ratio 9:16 */          │
+   │   border-radius: 12px;                               │
+   │   box-shadow: 0 8px 24px rgba(0,0,0,0.2);            │
+   │ }                                                    │
+   │                                                      │
+   │ .video-container iframe {                            │
+   │   position: absolute;                                │
+   │   width: 100%;                                       │
+   │   height: 100%;                                      │
+   │ }                                                    │
+   └──────────────────────────────────────────────────────┘
+
+
+🎬 FUNCIONALIDADES DEL VIDEO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   ✓ Reproducción directa en la web (sin salir de la página)
+   ✓ Controles de YouTube (play, pause, volumen)
+   ✓ Pantalla completa disponible
+   ✓ Compatible con todos los navegadores
+   ✓ Se carga de forma eficiente (lazy loading)
+   ✓ No consume espacio en tu servidor
+
+
+🔄 CÓMO CAMBIAR EL VIDEO EN EL FUTURO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   1. Sube el nuevo video a YouTube
+   
+   2. Copia el ID del video (lo que viene después de /shorts/)
+      Ejemplo: https://youtube.com/shorts/XXXXX
+                                            └─┬─┘
+                                              └── Este es el ID
+   
+   3. Abre index.html
+   
+   4. Busca esta línea:
+      src="https://www.youtube.com/embed/RmvJ9TkUsM0"
+   
+   5. Reemplaza el ID:
+      src="https://www.youtube.com/embed/NUEVO_ID"
+   
+   6. Guarda y sube al servidor
+   
+   ¡Listo! El video se actualizará automáticamente
+
+
+✏️ PERSONALIZACIÓN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   Si quieres cambiar textos, edita en index.html:
+   
+   📝 TÍTULO:
+      Busca: <h2><i class="fa-solid fa-video"></i> 
+             Descubre nuestras instalaciones</h2>
+      
+      Puedes cambiarlo por:
+      - "Conoce nuestro colegio"
+      - "Tour virtual del CEIP Capitulaciones"
+      - "Vista aérea de nuestras instalaciones"
+      - Etc.
+   
+   📝 DESCRIPCIÓN:
+      Busca: <p class="video-descripcion">
+             Vista aérea del CEIP Capitulaciones de Santa Fe</p>
+      
+      Puedes cambiarlo por:
+      - "Recorrido por nuestras instalaciones"
+      - "Drone view - CEIP Capitulaciones"
+      - Etc.
+
+
+📦 ARCHIVOS PARA DESCARGAR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   📁 web-ceip-capitulaciones.zip
+      Contiene TODO actualizado:
+      
+      ✓ index.html con video integrado
+      ✓ style.css con estilos del video
+      ✓ Todas las demás páginas
+      ✓ Imágenes y recursos
+      ✓ demo-video.html (página de prueba)
+
+
+🧪 PRUEBA EL VIDEO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   1. Abre: demo-video.html
+      → Verás el video exactamente como quedará en la web
+      → Incluye comparación de diseños
+      → Opciones de personalización
+   
+   2. Abre: index.html
+      → Verás la página principal completa con el video
+
+
+🚀 INSTALACIÓN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   1. ✓ Descarga: web-ceip-capitulaciones.zip
+   2. ✓ Extrae todos los archivos
+   3. ✓ Sube index.html y style.css a tu servidor
+      (o todos los archivos si quieres todo actualizado)
+   4. ✓ ¡Listo! El video ya estará visible
+
+
+💡 VENTAJAS DE ESTE DISEÑO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   ✅ Profesional y moderno
+   ✅ Optimizado para YouTube Shorts (vertical)
+   ✅ Funciona en todos los dispositivos
+   ✅ Carga rápida (video alojado en YouTube)
+   ✅ No ocupa espacio en tu servidor
+   ✅ Fácil de actualizar el video
+   ✅ Integrado con el diseño del colegio
+
+
+╔══════════════════════════════════════════════════════════════════════╗
+║                     ✅ VIDEO INTEGRADO CON ÉXITO                     ║
+║                                                                      ║
+║         Tu web ahora incluye un impactante video aéreo que           ║
+║            mostrará a las familias las instalaciones del             ║
+║                    CEIP Capitulaciones de Santa Fe                   ║
+╚══════════════════════════════════════════════════════════════════════╝

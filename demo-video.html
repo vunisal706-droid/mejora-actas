@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo - Video Aéreo | CEIP Capitulaciones</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .demo-header {
+      background: linear-gradient(135deg, #004aad 0%, #0066dd 100%);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .demo-nota {
+      background: #d1ecf1;
+      border-left: 4px solid #0c5460;
+      padding: 1.5rem;
+      margin: 2rem auto;
+      border-radius: 8px;
+      max-width: 900px;
+    }
+    .demo-nota h3 {
+      margin-top: 0;
+      color: #0c5460;
+    }
+    .comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+    .comparison-item {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .comparison-item h3 {
+      color: #004aad;
+      margin-top: 0;
+    }
+    @media (max-width: 768px) {
+      .comparison {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-header">
+    <img src="LOGO.jpg" alt="Logo CEIP Capitulaciones" style="height: 80px; margin-bottom: 1rem;">
+    <h1>🎥 Vista Previa - Video Aéreo del Colegio</h1>
+    <p>Integración de YouTube Shorts en la página principal</p>
+  </div>
+
+  <div class="demo-nota">
+    <h3>✅ Video Integrado Correctamente</h3>
+    <p><strong>Ubicación:</strong> Entre "Sobre el colegio" y "Asistente Virtual"</p>
+    <p><strong>Video:</strong> <a href="https://youtube.com/shorts/RmvJ9TkUsM0" target="_blank">https://youtube.com/shorts/RmvJ9TkUsM0</a></p>
+    <p><strong>Características:</strong></p>
+    <ul>
+      <li>✓ Diseño responsive (se adapta a móviles)</li>
+      <li>✓ Formato vertical optimizado para YouTube Shorts</li>
+      <li>✓ Marco con sombra y bordes redondeados</li>
+      <li>✓ Título con icono animado</li>
+      <li>✓ Colores integrados con el diseño del colegio</li>
+    </ul>
+  </div>
+
+  <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+    <h2 style="text-align: center; color: #004aad; margin: 3rem 0 2rem 0;">👁️ Así se verá en tu web:</h2>
+    
+    <!-- PREVIEW DEL VIDEO TAL COMO APARECERÁ -->
+    <section class="contenido">
+      <div class="video-seccion">
+        <h2><i class="fa-solid fa-video"></i> Descubre nuestras instalaciones</h2>
+        <p class="video-descripcion">Vista aérea del CEIP Capitulaciones de Santa Fe</p>
+        <div class="video-container">
+          <iframe 
+            src="https://www.youtube.com/embed/RmvJ9TkUsM0" 
+            title="Vista aérea CEIP Capitulaciones" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <div class="demo-nota" style="background: #fff3cd; border-color: #856404;">
+      <h3 style="color: #856404;">💡 Personalización</h3>
+      <p>Si quieres cambiar algo, puedo modificar:</p>
+      <ul>
+        <li>📝 El título (actualmente: "Descubre nuestras instalaciones")</li>
+        <li>📝 El texto descriptivo</li>
+        <li>🎨 Los colores del fondo</li>
+        <li>📏 El tamaño del video</li>
+        <li>📍 La ubicación en la página</li>
+      </ul>
+    </div>
+
+    <h2 style="text-align: center; color: #004aad; margin: 3rem 0 2rem 0;">📊 Comparación de Diseños</h2>
+    
+    <div class="comparison">
+      <div class="comparison-item">
+        <h3>✅ Diseño Actual (Implementado)</h3>
+        <ul>
+          <li>🎯 <strong>Formato:</strong> Vertical (9:16) para Shorts</li>
+          <li>📐 <strong>Tamaño:</strong> Máximo 600px de ancho</li>
+          <li>🎨 <strong>Estilo:</strong> Fondo azul claro con degradado</li>
+          <li>📱 <strong>Responsive:</strong> Se adapta a móviles</li>
+          <li>⭐ <strong>Extra:</strong> Icono animado + sombra bonita</li>
+        </ul>
+      </div>
+      
+      <div class="comparison-item">
+        <h3>💡 Alternativas Disponibles</h3>
+        <p><strong>Si prefieres otro diseño, puedo hacer:</strong></p>
+        <ul>
+          <li>📺 Video más grande (pantalla completa)</li>
+          <li>🖼️ Video con galería de fotos al lado</li>
+          <li>🎬 Video tipo "hero" (arriba del todo)</li>
+          <li>📱 Carrusel con varios videos</li>
+          <li>🎨 Otros colores de fondo</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin: 4rem 0;">
+      <a href="index.html" class="boton-asistente-grande" style="display: inline-block;">
+        <i class="fa-solid fa-home"></i> Ver Página Principal Completa
+      </a>
+    </div>
+  </div>
+
+  <footer style="margin-top: 4rem;">
+    <p>© 2025 CEIP Capitulaciones de Santa Fe | Demo del Video Aéreo</p>
+  </footer>
+
+</body>
+</html>

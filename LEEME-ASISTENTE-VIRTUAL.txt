@@ -227,3 +227,120 @@ Se han integrado dos elementos principales en tu sitio web:
 ║          Tu asistente virtual está listo para ayudar a tu comunidad           ║
 ║                         educativa 24 horas al día, 7 días a la semana         ║
 ╚═══════════════════════════════════════════════════════════════════════════════╝
+
+
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                                                                               ║
+║                     🔧 CORRECCIÓN: PROBLEMA DE AVISOS 🔧                      ║
+║                                                                               ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+🐛 PROBLEMA DETECTADO Y RESUELTO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   ❌ PROBLEMA:
+      La sección "Avisos importantes" mostraba constantemente "Cargando avisos..."
+      sin cargar nunca el contenido de avisos.txt
+
+   🔍 CAUSA:
+      El script JavaScript estaba truncado/incompleto. Terminaba en:
+      .map(lin
+      
+      Sin completar la función, lo que causaba un error de sintaxis.
+
+   ✅ SOLUCIÓN APLICADA:
+      Se ha completado el script JavaScript con:
+      
+      ┌─────────────────────────────────────────────────────────────────┐
+      │ fetch('avisos.txt')                                             │
+      │   .then(response => response.text())                            │
+      │   .then(text => {                                               │
+      │     const avisosContainer = document.getElementById(            │
+      │       'avisos-container'                                        │
+      │     );                                                          │
+      │     avisosContainer.innerHTML = text                            │
+      │       .split('\n')                                              │
+      │       .filter(line => line.trim() !== '')                       │
+      │       .map(line => `<span>${line}</span>`)  ← COMPLETADO        │
+      │       .join(' • ');                         ← COMPLETADO        │
+      │   })                                                            │
+      │   .catch(error => {                        ← AÑADIDO            │
+      │     document.getElementById('avisos-container').innerHTML =     │
+      │       '<p>No se pudieron cargar los avisos.</p>';               │
+      │   });                                                           │
+      └─────────────────────────────────────────────────────────────────┘
+
+
+⚠️  IMPORTANTE: REQUISITO DE SERVIDOR WEB
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   ⚡ Los avisos SOLO funcionan cuando los archivos están en un servidor web.
+   
+   ❌ NO funcionará:
+      - Abriendo index.html directamente desde el explorador de archivos
+      - Haciendo doble clic en el archivo HTML
+      
+   ✅ SÍ funcionará:
+      - Subiendo los archivos a tu hosting/servidor web
+      - Usando GitHub Pages
+      - Usando un servidor local (XAMPP, WAMP, etc.)
+      - Extensión "Live Server" de Visual Studio Code
+
+   📝 RAZÓN:
+      Los navegadores bloquean peticiones fetch() a archivos locales
+      por razones de seguridad (política CORS - Cross-Origin Resource Sharing)
+
+
+🧪 ARCHIVO DE PRUEBA INCLUIDO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   Se ha incluido un archivo de prueba: test-avisos.html
+   
+   Este archivo te permite:
+   ✓ Verificar que el script funciona correctamente
+   ✓ Ver el código corregido
+   ✓ Entender por qué es necesario un servidor web
+   ✓ Diagnosticar problemas
+
+
+📝 CÓMO EDITAR LOS AVISOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   1. Abre el archivo: avisos.txt
+   
+   2. Edita el contenido (cada línea es un aviso):
+      
+      📅 Vacunas de primero y sexto el 4 noviembre.
+      🎒 Comienzo del PROA lunes 20 de octubre
+      📢 Están al salir las bonificaciones definitivas
+      
+   3. Guarda el archivo
+   
+   4. Sube avisos.txt al servidor
+   
+   5. ¡Listo! Los cambios aparecerán automáticamente
+
+   💡 CONSEJOS:
+      - Usa emojis al inicio de cada aviso para hacerlos más visuales
+      - Mantén los avisos concisos (una línea cada uno)
+      - No uses líneas vacías entre avisos
+
+
+✅ ARCHIVOS CORREGIDOS EN ESTA VERSIÓN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   ✓ index.html - Script JavaScript completo y funcional
+   ✓ avisos.txt - Formato correcto
+   ✓ test-avisos.html - Archivo de prueba (NUEVO)
+
+
+🚀 PRÓXIMOS PASOS RECOMENDADOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   1. Sube TODOS los archivos a tu servidor web
+   2. Abre la web desde el servidor (http://tu-dominio.com)
+   3. Verifica que los avisos se muestran correctamente
+   4. Edita avisos.txt cuando necesites actualizar la información
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
