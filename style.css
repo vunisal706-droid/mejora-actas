@@ -1,0 +1,326 @@
+/* ===== Estilos generales ===== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f9fafc;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+/* ===== Cabecera ===== */
+header {
+  background: #004aad;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header img {
+  height: 70px;
+  margin-bottom: 10px;
+}
+
+/* ===== Navegación ===== */
+nav ul {
+  list-style: none;
+  background-color: #004aad;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  display: block;
+  transition: background 0.3s;
+}
+
+nav ul li a:hover, .activo {
+  background: #00347a;
+}
+
+/* ===== Hero ===== */
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.hero-img, .fotoentrada {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 90%;
+}
+
+/* ===== Contenido ===== */
+.contenido {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contenido h2, .contenido h3 {
+  margin-top: 1.5rem;
+}
+
+.contenido p, .contenido li {
+  text-align: left;
+  line-height: 1.5;
+}
+
+/* ===== Información de contacto ===== */
+.info-contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  font-size: 1.1rem;
+}
+
+.info-contacto div {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  padding: 1rem 2rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* ===== Botones ===== */
+.boton-whatsapp {
+  background-color: #25D366;
+  color: white;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px 5px 10px 0;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.boton-youtube {
+  background-color: #FF0000;
+  color: white;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px 5px 10px 0;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.boton-spotify {
+  background-color: #1DB954; /* Verde Spotify */
+  color: white;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px 5px 10px 0;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.boton-ivoox {
+  background-color: #f96500; /* Naranja característico de iVoox */
+  color: white;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px 5px 10px 0;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.boton-volver {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px 5px;
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(90deg, #004aad, #60efff);
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+/* ===== Hover común ===== */
+.boton-whatsapp:hover,
+.boton-youtube:hover,
+.boton-spotify:hover,
+.boton-ivoox:hover,
+.boton-volver:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* ===== Iconos dentro de los botones ===== */
+.boton-whatsapp i,
+.boton-youtube i,
+.boton-spotify i,
+.boton-ivoox i,
+.boton-volver i {
+  margin-right: 8px;
+  vertical-align: middle;
+  font-size: 1.2em;
+}
+
+/* ===== Iframes ===== */
+iframe {
+  border-radius: 12px;
+  width: 100%;
+  margin-top: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #004aad;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* ===== Avisos importantes (marquesina automática) ===== */
+#avisos {
+  background: #fff9e6;
+  border: 2px solid #ffcc00;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+#avisos h2 {
+  color: #cc8a00;
+  margin-bottom: 1rem;
+}
+
+.avisos-marquesina {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-avisos 25s linear infinite;
+  font-size: 1rem;
+  color: #333;
+}
+
+.avisos-marquesina span {
+  margin: 0 1.5rem;
+}
+
+/* Animación horizontal de scroll */
+@keyframes scroll-avisos {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
+}
+
+/* ======== 🔹 MEDIA QUERIES (RESPONSIVE) ======== */
+
+/* Tablets (pantallas medianas) */
+@media (max-width: 992px) {
+  header img {
+    height: 60px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+  }
+
+  .hero-text {
+    font-size: 0.95rem;
+    padding: 1rem;
+  }
+
+  .contenido {
+    padding: 1.5rem;
+  }
+
+  .avisos-marquesina {
+    animation-duration: 30s;
+  }
+}
+
+/* Móviles (pantallas pequeñas) */
+@media (max-width: 600px) {
+  header {
+    padding: 1rem;
+  }
+
+  header img {
+    height: 50px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li a {
+    padding: 0.8rem;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .hero-img {
+    height: 200px;
+  }
+
+  .hero-text {
+    position: static;
+    transform: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .contenido {
+    padding: 1rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
+
+  /* Botones en columna en móvil */
+  .boton-whatsapp,
+  .boton-youtube,
+  .boton-spotify,
+  .boton-ivoox {
+    width: 90%;
+    margin: 8px auto;
+    display: block;
+  }
+
+  .avisos-marquesina {
+    font-size: 0.9rem;
+    animation-duration: 35s;
+  }
+}

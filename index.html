@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CEIP Capitulaciones de Santa Fe</title>
+  <link rel="icon" href="LOGO.jpg" type="image/jpeg">
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <img src="LOGO.jpg" alt="Logo CEIP Capitulaciones" class="logo">
+    <h1>CEIP Capitulaciones de Santa Fe</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html" class="activo">Inicio</a></li>
+      <li><a href="nuestro-centro.html">Nuestro Centro</a></li>
+      <li><a href="https://vunisal706-droid.github.io/proyectocentro/" target="_blank">Plan de Centro</a></li>
+      <li><a href="etapas.html">Etapas Educativas</a></li>
+      <li><a href="comedor.html">Comedor</a></li>
+      <li><a href="podcast.html">Podcast</a></li>
+      <li><a href="https://www.facebook.com/100063482806644" target="_blank">Noticias</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <img src="fotocole.jpg" alt="Foto del colegio" class="hero-img">
+    <div class="hero-text">
+      <h2>Bienvenidos a nuestra comunidad educativa</h2>
+      <p>Un colegio público ubicado en Santa Fe, Granada, comprometido con la inclusión, la innovación y la convivencia. Además, somos un centro bilingüe que ofrece enseñanza en inglés desde Educación Infantil hasta Primaria.</p>
+    </div>
+  </section>
+
+  <!-- Sobre el colegio -->
+  <section class="contenido">
+    <h2>Sobre el colegio</h2>
+    <p>El CEIP Capitulaciones de Santa Fe es un centro educativo público ubicado en Santa Fe, Granada, con un fuerte compromiso con la atención a la diversidad, el aprendizaje cooperativo y el desarrollo integral del alumnado.</p>
+  </section>
+
+  <!-- Enlaces a canales -->
+  <section class="contenido" style="text-align:center;">
+    <h2>📢 Nuestros canales</h2>
+
+    <a href="https://www.whatsapp.com/channel/0029VaAhjMpH5JLwCk1qDh0J" class="boton-whatsapp" target="_blank">
+      <i class="fab fa-whatsapp"></i> Canal de WhatsApp
+    </a>
+
+    <a href="https://www.youtube.com/channel/UCs4FoPRHm3asdDxD9F13u8Q?app=desktop" class="boton-youtube" target="_blank">
+      <i class="fab fa-youtube"></i> Canal de YouTube
+    </a>
+
+    <a href="https://open.spotify.com/show/7gDSi9byfcLIlIwCFErhGK?si=fd578ae976ba4f76&nd=1&dlsi=9dbecbc21b9649f9" class="boton-spotify" target="_blank">
+      <i class="fab fa-spotify"></i> Canal de Spotify
+    </a>
+
+    <a href="https://go.ivoox.com/sq/2477911" class="boton-ivoox" target="_blank">
+      <i class="fa-solid fa-podcast"></i> Canal de iVoox
+    </a>
+  </section>
+
+  <!-- Avisos importantes -->
+  <section class="contenido" id="avisos">
+    <h2>⚠️ Avisos importantes</h2>
+    <div class="avisos-marquesina" id="avisos-container">
+      Cargando avisos...
+    </div>
+  </section>
+
+  <!-- Actualidad -->
+  <section class="contenido">
+    <h2>📰 Actualidad</h2>
+    <p><em>Nota: Para ver las publicaciones de Facebook, el sitio debe estar en un servidor web local o remoto. No se muestran correctamente si abres el archivo directamente desde la carpeta.</em></p>
+    <div class="fb-page" data-href="https://www.facebook.com/100063482806644" data-tabs="timeline" data-width="500" data-height="600" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+      <blockquote cite="https://www.facebook.com/100063482806644" class="fb-xfbml-parse-ignore">
+        <a href="https://www.facebook.com/100063482806644">Colegio Capitulaciones</a>
+      </blockquote>
+    </div>
+  </section>
+
+  <footer id="contacto">
+    <p>📍 Santa Fe (Granada) | ☎️ 958 513 820 | ✉️ <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5c6d646c6c6464696f723938291c362932283d38393d32383d30293f353d72392f">[email&#160;protected]</a></p>
+    <p>© 2025 CEIP Capitulaciones de Santa Fe</p>
+  </footer>
+
+  <div id="fb-root"></div>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v16.0"></script>
+
+  <!-- Script para cargar avisos desde avisos.txt -->
+  <script>
+    fetch('avisos.txt')
+      .then(response => response.text())
+      .then(text => {
+        const avisosContainer = document.getElementById('avisos-container');
+        avisosContainer.innerHTML = text
+          .split('\n')
+          .filter(line => line.trim() !== '')
+          .map(lin
